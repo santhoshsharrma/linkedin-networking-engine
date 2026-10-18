@@ -1,10 +1,20 @@
 # LinkedIn 500 Tracker
 
-A lightweight, privacy-first web app for planning and tracking LinkedIn networking outreach. It helps you reach 500+ connections through a consistent daily routine, follow up at the right time, and turn relationships into referrals.
+**Build meaningful professional connections, one day at a time.**
 
-**Live demo:** https://linkedin-networking-engine.vercel.app/
+A free, open-source networking CRM for students and early-career professionals. Plan outreach, track conversations, manage follow-ups, and build relationships that can lead to career opportunities — all from one lightweight dashboard.
 
-> Not affiliated with or endorsed by LinkedIn. The app does not connect to LinkedIn, scrape profiles, or automate any actions. You log everything manually.
+- 🎯 **Track your goal:** Monitor progress toward 500+ connections.
+- 🤝 **Manage relationships:** Organise contacts, statuses, and follow-ups.
+- ✉️ **Personalise outreach:** Use professional message templates tailored to your goals.
+- 📊 **Measure progress:** Understand acceptance rates, response patterns, and daily consistency.
+- 🔒 **Keep control of your data:** Everything stays in your browser, with no account or backend required.
+
+**[🚀 Try the live demo](https://linkedin-networking-engine.vercel.app/)** · **[⭐ Star on GitHub](https://github.com/santhoshsharrma/linkedin-networking-engine)** · **[🤝 Contribute](https://github.com/santhoshsharrma/linkedin-networking-engine/issues)**
+
+> Not affiliated with or endorsed by LinkedIn. This tool does not scrape profiles, connect to LinkedIn, or automate LinkedIn actions. All outreach and tracking are performed manually.
+
+Built with HTML, CSS, and vanilla JavaScript. Free and open source under the MIT License.
 
 ---
 
