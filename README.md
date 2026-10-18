@@ -69,6 +69,8 @@ This tracker gives students and early-career professionals one place to:
 - Backup and restore as JSON.
 - Light and dark theme that follows your system setting, with a manual toggle.
 - Responsive layout that works on mobile.
+- "Load sample data" button to try the app instantly, with a one-click removal.
+- Link preview tags (Open Graph) so shared links look good on LinkedIn and messaging apps.
 
 ## How it works
 
@@ -94,8 +96,8 @@ The app is a single static HTML file with no build step and no dependencies to i
 ### Run locally
 
 ```bash
-git clone https://github.com/<santhoshsharrma>/linkedin-connections-engine.git
-cd linkedin-connections-engine
+git clone https://github.com/santhoshsharrma/linkedin-networking-engine.git
+cd linkedin-networking-engine
 # open index.html in your browser, or serve it:
 npx serve .
 ```
@@ -183,7 +185,9 @@ Stored as one JSON object:
 
 ```
 .
-├── index.html   # markup, styles, and logic in one file
+├── index.html     # markup, styles, and logic in one file
+├── og-image.png   # link preview image (1200x630)
+├── LICENSE
 └── README.md
 ```
 
@@ -230,13 +234,13 @@ Please keep the project dependency-free and privacy-first. Features that add tra
 
 ## License
 
-Released under the MIT License. Add a `LICENSE` file to the repository before publishing.
+Released under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Author
 
-Built by **Santhosh Sharma**
+Built by **Santhosh Sharma**.
 
-- LinkedIn: `<www.linkedin.com/in/santhoshsharma>`
-- GitHub: `<https://github.com/santhoshsharrma>`
-- Portfolio: `<https://santhoshsharrma.me>`
-- Live demo: https://linkedin-networking-engine.vercel.app
+- LinkedIn: [linkedin.com/in/santhoshsharma](https://www.linkedin.com/in/santhoshsharma)
+- GitHub: [github.com/santhoshsharrma](https://github.com/santhoshsharrma)
+- Portfolio: [santhoshsharrma.me](https://santhoshsharrma.me)
+- Live demo: [linkedin-networking-engine.vercel.app](https://linkedin-networking-engine.vercel.app/)
