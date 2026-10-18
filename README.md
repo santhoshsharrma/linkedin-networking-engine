@@ -98,7 +98,7 @@ The app is a single static HTML file with no build step and no dependencies to i
 ```bash
 git clone https://github.com/santhoshsharrma/linkedin-networking-engine.git
 cd linkedin-networking-engine
-# open index.html in your browser, or serve it:
+# open linkedin-tracker.html in your browser, or serve it:
 npx serve .
 ```
 
@@ -129,7 +129,7 @@ npx serve .
 
 ## Customisation
 
-Everything is in `index.html`. The main configuration objects are near the top of the script:
+Everything is in `linkedin-tracker.html`. The main configuration objects are near the top of the script:
 
 | Object | Purpose |
 | --- | --- |
@@ -185,7 +185,7 @@ Stored as one JSON object:
 
 ```
 .
-├── index.html     # markup, styles, and logic in one file
+├── linkedin-tracker.html     # markup, styles, and logic in one file
 ├── og-image.png   # link preview image (1200x630)
 ├── LICENSE
 └── README.md
