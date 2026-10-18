@@ -2,7 +2,7 @@
 
 A lightweight, privacy-first web app for planning and tracking LinkedIn networking outreach. It helps you reach 500+ connections through a consistent daily routine, follow up at the right time, and turn relationships into referrals.
 
-**Live demo:** https://linkedin-connections-engine.vercel.app/
+**Live demo:** https://linkedin-networking-engine.vercel.app/
 
 > Not affiliated with or endorsed by LinkedIn. The app does not connect to LinkedIn, scrape profiles, or automate any actions. You log everything manually.
 
@@ -94,7 +94,7 @@ The app is a single static HTML file with no build step and no dependencies to i
 ### Run locally
 
 ```bash
-git clone https://github.com/<your-username>/linkedin-connections-engine.git
+git clone https://github.com/<santhoshsharrma>/linkedin-connections-engine.git
 cd linkedin-connections-engine
 # open index.html in your browser, or serve it:
 npx serve .
@@ -239,4 +239,4 @@ Built by **Santhosh Sharma**
 - LinkedIn: `<www.linkedin.com/in/santhoshsharma>`
 - GitHub: `<https://github.com/santhoshsharrma>`
 - Portfolio: `<https://santhoshsharrma.me>`
-- Live demo: https://linkedin-connections-engine.vercel.app/
+- Live demo: https://linkedin-networking-engine.vercel.app
