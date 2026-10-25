@@ -50,10 +50,11 @@ This tracker gives students and early-career professionals one place to:
 ## Features
 
 **Tracking**
-- Log each request with name, LinkedIn ID (a full profile URL is accepted and the ID is extracted), category, and date sent.
+- Log each request with name, LinkedIn ID (a full profile URL is accepted and the ID is extracted), optional company, category, and date sent.
 - Status pipeline: Sent, Accepted, Followed up, Replied, Referral stage, No response.
 - Automatic response label (Replied, Accepted with no reply yet, Pending, No response after 10+ days).
 - A "what to do next" suggestion for every row, with a one-click copy of the matching message.
+- **Today's queue:** a short list of people who need a follow-up, a nudge, a reply, or a status update.
 - Search plus category and status filters.
 
 **Goal and consistency**
@@ -62,9 +63,14 @@ This tracker gives students and early-career professionals one place to:
 - Estimated requests and days remaining, based on your real accept rate.
 - Option to include connections you already had before starting.
 
+**Insights**
+- Per-category sent, accepted, replied, and accept rate, so you can see which groups respond best.
+- A plain-language insight naming the category that accepts you most.
+- Top companies by number of requests.
+- Requests per day for the last 7 days.
+
 **Categories**
 - Recruiters, Backend engineers, Alumni, Hiring managers, Peers and students, Mentors and creators.
-- Per-category sent, accepted, replied, and accept rate, so you can see which groups respond best.
 
 **Messages**
 - Professional, warm connection notes for each category, kept under LinkedIn's 200-character note limit.
@@ -74,13 +80,18 @@ This tracker gives students and early-career professionals one place to:
 - First-run profile setup (your name, course, target field, graduation year) personalises every message automatically. It can be edited at any time.
 - A universal connection note that works for any category.
 
-**Data**
+**Data and sharing**
 - Export to CSV.
 - Backup and restore as JSON.
-- Light and dark theme that follows your system setting, with a manual toggle.
-- Responsive layout that works on mobile.
+- **Progress card:** download a 1200×630 image of your connection count and accept rate, ready for a LinkedIn post.
 - "Load sample data" button to try the app instantly, with a one-click removal.
 - Link preview tags (Open Graph) so shared links look good on LinkedIn and messaging apps.
+
+**Experience**
+- Monochrome, typography-led design with a light and dark theme that follows your system setting, plus a manual toggle.
+- Responsive layout that works on mobile.
+- Keyboard shortcuts: `/` to search, `n` to add a request.
+- Respects reduced-motion settings.
 
 ## How it works
 
@@ -117,18 +128,19 @@ npx serve .
 **Vercel**
 1. Push the repository to GitHub.
 2. Import it in Vercel. Framework preset: **Other**. No build command is needed.
+3. The included `vercel.json` makes the root URL open `linkedin-tracker.html`. If you rename the file to `index.html`, you can delete `vercel.json`.
 
 **GitHub Pages**
-1. Open the repository **Settings**, then **Pages**.
-2. Choose the main branch and the root folder, then save.
+1. Rename `linkedin-tracker.html` to `index.html` (Pages serves `index.html` at the root).
+2. Open the repository **Settings**, then **Pages**.
+3. Choose the main branch and the root folder, then save.
 
 ## Usage guide
 
 **Daily routine (about 20 minutes)**
 - Send 10 to 15 requests across different categories and log them.
-- Send follow-ups to everyone who accepted yesterday.
+- Work through **Today's queue**: follow-ups for new accepts, one nudge for quiet contacts, replies to anyone who wrote back.
 - Leave 3 thoughtful comments on posts from people you contacted.
-- Nudge once, only for people marked "Followed up" for 6 or more days, then stop.
 - Update statuses so the numbers stay honest.
 
 **Tips for better results**
@@ -152,10 +164,13 @@ Everything is in `linkedin-tracker.html`. The main configuration objects are nea
 
 Templates use placeholders: `{n}` (the recipient's first name), `{me}` (your name), `{study}` (your course), `{role}` (your target field), and `{yr}` (your graduation year). The last four come from the profile you fill in on first use, so nobody needs to edit code to personalise their messages.
 
+Design tokens (colours, borders) are CSS variables at the top of the stylesheet, with a matching dark-theme block.
+
 ## Data and privacy
 
 - All data is stored in your browser using `localStorage` under the key `li500.v1`.
 - There is no server, account, analytics, or tracking. Nothing you enter leaves your device.
+- The progress card is generated in your browser and downloaded directly. It is never uploaded.
 - Data is per browser and per device. Clearing site data, using private browsing, or switching browsers will remove it, so use **Backup JSON** regularly.
 - Two deployments of the app (for example a local copy and a hosted copy) do not share data. Use Backup and Restore to move entries between them.
 
@@ -180,6 +195,7 @@ Stored as one JSON object:
       "id": "1729254000000ab12",
       "name": "Jane Doe",
       "handle": "jane-doe-123",
+      "co": "Acme Labs",
       "cat": "rec",
       "date": "2026-10-18",
       "status": "sent"
@@ -189,27 +205,30 @@ Stored as one JSON object:
 ```
 
 - `cat` is a key from `CATS` and `status` is a key from `ST`.
+- `co` (company) is optional. Entries loaded from sample data also carry `"sample": true`.
 - `date` is the local date the request was sent, in `YYYY-MM-DD` format.
 
 ## Project structure
 
 ```
 .
-├── linkedin-tracker.html     # markup, styles, and logic in one file
-├── og-image.png   # link preview image (1200x630)
+├── linkedin-tracker.html   # markup, styles, and logic in one file
+├── vercel.json             # serves the app at the root URL on Vercel
+├── og-image.png            # link preview image (1200x630)
 ├── LICENSE
 └── README.md
 ```
 
-Built with HTML, CSS, and vanilla JavaScript. The only external resource is Google Fonts (Schibsted Grotesk), with system fonts as a fallback.
+Built with HTML, CSS, and vanilla JavaScript. The only external resource is Google Fonts (Inter), with system fonts as a fallback.
 
 ## Roadmap
 
 **Near term**
-- [ ] Company column and filter, to track outreach per target company
+- [x] Company field and top-companies view
+- [x] Follow-up queue on the home screen
+- [x] Shareable progress card
 - [ ] Editable templates inside the app (profile fields are already supported)
 - [ ] Notes field per contact
-- [ ] Follow-up due list on the home screen, such as "accepted yesterday, no message sent"
 - [ ] CSV import
 - [ ] Bulk add for faster daily logging
 
