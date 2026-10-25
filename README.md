@@ -10,7 +10,7 @@ A free, open-source networking CRM for students and early-career professionals. 
 - 📊 **Measure progress:** Understand acceptance rates, response patterns, and daily consistency.
 - 🔒 **Keep control of your data:** Everything stays in your browser, with no account or backend required.
 
-**[🚀 Try the live demo](https://linkedin-networking-engine.vercel.app/)** · **[⭐ Star on GitHub](https://github.com/santhoshsharrma/linkedin-networking-engine)** · **[🤝 Contribute](https://github.com/santhoshsharrma/linkedin-networking-engine/issues)**
+**[🚀 Try the live demo](https://santhoshsharrma.github.io/linkedin-networking-engine/)** · **[⭐ Star on GitHub](https://github.com/santhoshsharrma/linkedin-networking-engine)** · **[🤝 Contribute](https://github.com/santhoshsharrma/linkedin-networking-engine/issues)**
 
 > Not affiliated with or endorsed by LinkedIn. This tool does not scrape profiles, connect to LinkedIn, or automate LinkedIn actions. All outreach and tracking are performed manually.
 
@@ -119,21 +119,21 @@ The app is a single static HTML file with no build step and no dependencies to i
 ```bash
 git clone https://github.com/santhoshsharrma/linkedin-networking-engine.git
 cd linkedin-networking-engine
-# open linkedin-tracker.html in your browser, or serve it:
+# open index.html in your browser, or serve it:
 npx serve .
 ```
 
 ### Deploy
 
-**Vercel**
-1. Push the repository to GitHub.
-2. Import it in Vercel. Framework preset: **Other**. No build command is needed.
-3. The included `vercel.json` makes the root URL open `linkedin-tracker.html`. If you rename the file to `index.html`, you can delete `vercel.json`.
-
-**GitHub Pages**
-1. Rename `linkedin-tracker.html` to `index.html` (Pages serves `index.html` at the root).
+**GitHub Pages** (recommended)
+1. Make sure the repository is public and the app is saved as `index.html` in the root.
 2. Open the repository **Settings**, then **Pages**.
-3. Choose the main branch and the root folder, then save.
+3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
+4. After a minute or two the site is live at `https://<username>.github.io/<repository>/`.
+
+**Vercel or Netlify**
+1. Import the repository.
+2. Framework preset: **Other**. No build command is needed.
 
 ## Usage guide
 
@@ -151,7 +151,7 @@ npx serve .
 
 ## Customisation
 
-Everything is in `linkedin-tracker.html`. The main configuration objects are near the top of the script:
+Everything is in `index.html`. The main configuration objects are near the top of the script:
 
 | Object | Purpose |
 | --- | --- |
@@ -212,8 +212,7 @@ Stored as one JSON object:
 
 ```
 .
-├── linkedin-tracker.html   # markup, styles, and logic in one file
-├── vercel.json             # serves the app at the root URL on Vercel
+├── index.html   # markup, styles, and logic in one file
 ├── og-image.png            # link preview image (1200x630)
 ├── LICENSE
 └── README.md
@@ -272,4 +271,4 @@ Built by **Santhosh Sharma**.
 - LinkedIn: [linkedin.com/in/santhoshsharma](https://www.linkedin.com/in/santhoshsharma)
 - GitHub: [github.com/santhoshsharrma](https://github.com/santhoshsharrma)
 - Portfolio: [santhoshsharrma.me](https://santhoshsharrma.me)
-- Live demo: [linkedin-networking-engine.vercel.app](https://linkedin-networking-engine.vercel.app/)
+- Live demo: [santhoshsharrma.github.io/linkedin-networking-engine](https://santhoshsharrma.github.io/linkedin-networking-engine/)
